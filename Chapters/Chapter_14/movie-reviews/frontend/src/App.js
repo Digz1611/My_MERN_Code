@@ -10,6 +10,7 @@ import Navbar from 'react-bootstrap/Navbar'
 
 
 function App() {
+  const [user, setUser] = React.useState(null)
   async function login(user = null) {// default user to null
     setUser(user)
   }
