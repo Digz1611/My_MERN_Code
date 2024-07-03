@@ -24,10 +24,12 @@ console.log('MONGO_USER:', process.env.MONGO_USER);
 console.log('MONGO_PASSWORD:', process.env.MONGO_PASSWORD);
 console.log('MONGO_DB:', process.env.MONGO_DB);
 
-const connectionString = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@mern.lr0r4rq.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority&appName=MERN`;
+// const connectionString = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@mern.lr0r4rq.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority&appName=MERNstack`;
+const connectionString = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@mernstack.wpwjhxa.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority&appName=MERNstack`;
+
 console.log('Connecting to MongoDB with URI:', connectionString);
 
-mongoose.connect(connectionString)
+mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@mernstack.wpwjhxa.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority&appName=MERNstack`)
   .then(() => {
     app.listen(3000, () => {
       console.log('Server is running on port 3000');
