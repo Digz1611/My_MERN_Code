@@ -30,7 +30,7 @@ interface WeatherDetail {
     temp_max: number;
     pressure: number;
     sea_level: number;
-    grnd_level: number;
+    grnd_level: number; 
     humidity: number;
     temp_kf: number;
   };
@@ -184,7 +184,6 @@ export default function Home() {
                         <p className="whitespace-nowrap">
                           {format(parseISO(d.dt_txt), "h:mm a")}
                         </p>
-
                         {/* <WeatherIcon iconName={d.weather[0].icon} /> */}
                         <WeatherIcon
                           iconName={getDayOrNightIcon(
@@ -227,7 +226,6 @@ export default function Home() {
                 {/* right  */}
               </div>
             </section>
-
             {/* 7 day forcast data  */}
             <section className="flex w-full flex-col gap-4  ">
               <p className="text-2xl">Forcast (7 days)</p>

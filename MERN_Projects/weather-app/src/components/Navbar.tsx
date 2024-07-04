@@ -104,7 +104,6 @@ export default function Navbar({ location }: Props) {
             <p className="text-slate-900/80 text-sm"> {location} </p>
             <div className="relative hidden md:flex">
               {/* SearchBox */}
-
               <SearchBox
                 value={city}
                 onSubmit={handleSubmiSearch}
